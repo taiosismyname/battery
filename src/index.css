@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F5F2ED;
+  --color-teal-dark: #0D3B3F;
+  --color-teal-light: #1A5D63;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-teal-dark font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-teal-dark text-cream px-8 py-3 rounded-full hover:bg-teal-light transition-all duration-300 uppercase tracking-widest text-xs font-semibold;
+}
+
+.btn-secondary {
+  @apply border border-teal-dark text-teal-dark px-8 py-3 rounded-full hover:bg-teal-dark hover:text-cream transition-all duration-300 uppercase tracking-widest text-xs font-semibold;
+}
